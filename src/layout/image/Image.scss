@@ -1,0 +1,32 @@
+#img-wrapper {
+    float: left;
+    width: 100%;
+    height: fit-content;
+    max-height: 100%;
+
+    display: flex;
+
+    #img-bg {
+        min-height: 100%;
+        min-width: 100%;
+        max-height: 100%;
+        max-width: 100%;
+        
+        background-color: black;
+        z-index: 2;
+        transform: translateX(-100%);
+    }
+
+    img {
+        width: fit-content;
+
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+
+        background-color: white;
+        z-index: 4;
+        mix-blend-mode: screen;
+        pointer-events: none;
+    }
+}

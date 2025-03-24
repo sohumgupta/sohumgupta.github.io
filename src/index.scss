@@ -1,0 +1,14 @@
+@import 'https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700';
+@import 'https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap';
+
+// $mono-font: 'Anonymous Pro', 'Courier New', Courier, monospace;
+$mono-font: 'Xanh Mono', 'Courier New', Courier, monospace;
+$body-font: 'Funnel Sans', sans-serif;
+
+*, html, body {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
