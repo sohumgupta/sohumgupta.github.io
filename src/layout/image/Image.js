@@ -2,9 +2,9 @@ import './Image.scss';
 
 function Image({ src, alt, imgClass }) {
     return (
-        <div id="img-wrapper">
+        <div className="img-wrapper">
             <img src={src} alt={alt} className={imgClass}/>
-            <div id="img-bg"/>
+            <div className="img-bg"/>
         </div>
     )
 }

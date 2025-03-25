@@ -23,6 +23,7 @@
 
         >*:first-child {
             font-size: 2.4vw;
+            font-family: $body-font;
             margin-bottom: .2em;
 
             .active { font-weight: normal !important; }

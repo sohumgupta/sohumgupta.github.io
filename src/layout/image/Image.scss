@@ -1,12 +1,15 @@
-#img-wrapper {
+.img-wrapper {
     float: left;
-    width: 100%;
+
+    width: fit-content;
     height: fit-content;
-    max-height: 100%;
+    
+    // max-width: 100%;
+    // max-height: 100%;
 
     display: flex;
 
-    #img-bg {
+    .img-bg {
         min-height: 100%;
         min-width: 100%;
         max-height: 100%;
@@ -14,7 +17,7 @@
         
         background-color: black;
         z-index: 2;
-        transform: translateX(-100%);
+        transform: translateX(-100%) scale(0.999);
     }
 
     img {

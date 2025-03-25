@@ -4,44 +4,48 @@
     width: 100%;
     height: fit-content;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
 
-    margin: 8vh 0;
-    padding: 0 10%;
-    gap: 8vh;
+    margin: 4vh 0;
+    gap: 4vh;
 
     .album-cover {
         width: 100%;
         height: fit-content;
         display: flex;
         flex-direction: column;
+        color: black;
+
+        .album-cover-pic { transition: all 0.25s ease; }
 
         .album-cover-info {
             width: 100%;
             display: flex;
-            flex-direction: column;
-            padding: 0.5em 0;
-            gap: 0.2em;
-            
-            font-size: 1.5em;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
 
-            span {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
+            padding-top: 0.5em;
 
-                font-family: $mono-font;
-                // text-transform: uppercase;
+            .album-name { 
+                font-family: $body-font;
+                font-size: 2em;
             }
 
-            .album-subtitle { 
-                font-family: $body-font;
+            .album-timeframe { 
+                font-family: $mono-font;
                 font-size: 1.5em;
+            }
+        }
+
+        &:hover {
+            font-style: italic;
+
+            .album-cover-pic {
+                filter: brightness(0.6);
             }
         }
     }
