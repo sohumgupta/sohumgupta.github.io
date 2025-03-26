@@ -3,14 +3,15 @@ import Page from '../../layout/page/Page';
 import Image from '../../layout/image/Image';
 
 import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import albumIDs from './AlbumIDs';
 
 function ImageCarousel() {
     let path = useLocation().pathname;
     let album = path.slice(path.lastIndexOf("/") + 1, path.length);
-    let ids = albumIDs[album];
+
+    let ids = albumIDs[album]["ids"];
     let numIDs = ids.length;
 
     const [imgID, setImgID] = useState(0);
@@ -29,12 +30,14 @@ function ImageCarousel() {
 
     return (
         <div className="image-carousel">
+            {/* <div className="description">{albumIDs[album]["descrip"]}</div> */}
             <div className="content">
                 <div className="prev-button" onClick={handlePrev}>←</div>
                 <Image src={"https://i.imgur.com/" + ids[imgID] + ".jpg"} imgClass="carousel-image"/>
                 <div className="next-button" onClick={handleNext}>→</div>
             </div>
             {createDots()}
+            
         </div>
         
     )

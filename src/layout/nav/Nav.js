@@ -35,8 +35,9 @@ function Nav() {
     
     if (path.includes("/photography") && lastPath !== "photography") {
         let nameMap = {
-            "oahu": "Oahu","arizona": "Arizona", "amsterdam": "Amsterdam", "berlin": "Berlin",
-            "copenhagen": "Copenhagen", "ghana": "Ghana", "providence": "Providence", "illinois": "Illinois",
+            "oahu": "Oahu","arizona": "Arizona", "amsterdam": "Amsterdam", 
+            "berlin": "Berlin", "copenhagen": "Copenhagen", "ghana": "Ghana", 
+            "new%20england": "New England", "cancun": "Cancun", "illinois": "Illinois",
             "florida": "Florida", "san%20francisco": "San Francisco", "quebec%20city": "Quebec City"
         }
         let newNavLinks = navLinks.toSpliced(7, 0, { linkText: nameMap[lastPath], href: "#", outerText: "│\u00a0\u00a0\u00a0└── "});

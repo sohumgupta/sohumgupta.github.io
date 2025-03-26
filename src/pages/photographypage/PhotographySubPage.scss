@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
 
-    padding: 8vh 4em;
+    padding: 8vh 2em;
 
     #image-carousel-wrapper {
         height: 100%;
@@ -84,6 +84,14 @@
     
             .active {
                 opacity: 1;
+            }
+
+            .description {
+                font-family: $body-font;
+                font-style: italic;
+                font-size: 1em;
+                padding: 1em;
+                overflow: visible;
             }
         }
     }
