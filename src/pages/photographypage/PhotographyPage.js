@@ -1,7 +1,7 @@
 import './PhotographyPage.scss';
 import Page from '../../layout/page/Page';
 import Image from '../../layout/image/Image';
-import LoadingPage from '../../layout/loading/LoadingPage';
+import LoadingScreen from '../../misc/loading/LoadingScreen';
 
 import { NavLink } from "react-router-dom";
 import useImagePreloader from '../../misc/UseImagePreloader';
@@ -65,7 +65,7 @@ function PhotographyPage() {
     const { imagesPreloaded } = useImagePreloader(preloadSrcList);
 
     if (!imagesPreloaded) {
-        return <LoadingPage/>
+        return <LoadingScreen/>
     }
 
     return (

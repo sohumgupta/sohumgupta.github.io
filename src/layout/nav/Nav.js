@@ -6,9 +6,9 @@ let navLinks = [
     { linkText: "Sohum Gupta", href: "/", outerText: ""},
     { linkText: "Projects", href: "/projects", outerText: "├── "},
     { linkText: "Writing", href: "/writing", outerText: "├── "},
-    { linkText: "Food", href: "/writing#food", outerText: "│\u00a0\u00a0\u00a0├── "},
-    { linkText: "Creative", href: "/writing#creative", outerText: "│\u00a0\u00a0\u00a0├── "},
-    { linkText: "Misc.", href: "/writing#misc", outerText: "│\u00a0\u00a0\u00a0└── "},
+    // { linkText: "Food", href: "/writing#food", outerText: "│\u00a0\u00a0\u00a0├── "},
+    // { linkText: "Creative", href: "/writing#creative", outerText: "│\u00a0\u00a0\u00a0├── "},
+    // { linkText: "Misc.", href: "/writing#misc", outerText: "│\u00a0\u00a0\u00a0└── "},
     { linkText: "Photography", href: "/photography", outerText: "├── "},
     { linkText: "About", href: "/about", outerText: "└── "},
     { linkText: "Bio", href: "/about#bio", outerText: "\u00a0\u00a0\u00a0\u00a0├── "},
@@ -40,7 +40,7 @@ function Nav() {
             "new%20england": "New England", "cancun": "Cancun", "illinois": "Illinois",
             "florida": "Florida", "san%20francisco": "San Francisco", "quebec%20city": "Quebec City"
         }
-        let newNavLinks = navLinks.toSpliced(7, 0, { linkText: nameMap[lastPath], href: "#", outerText: "│\u00a0\u00a0\u00a0└── "});
+        let newNavLinks = navLinks.toSpliced(4, 0, { linkText: nameMap[lastPath], href: "#", outerText: "│\u00a0\u00a0\u00a0└── "});
         return (
             <div id="nav-wrapper">
                 <div id="nav-list">

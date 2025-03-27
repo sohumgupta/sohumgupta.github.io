@@ -4,13 +4,13 @@ import Page from '../../layout/page/Page';
 import Image from '../../layout/image/Image';
 
 import useImagePreloader from '../../misc/UseImagePreloader';
-import LoadingPage from '../../layout/loading/LoadingPage';
+import LoadingScreen from '../../misc/loading/LoadingScreen';
 
 function HomePage() {
     const { imagesPreloaded } = useImagePreloader([MePicture]);
 
     if (!imagesPreloaded) {
-        return <LoadingPage/>
+        return <LoadingScreen/>
     }
 
     return (

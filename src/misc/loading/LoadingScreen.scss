@@ -1,0 +1,40 @@
+@import '../../index.scss';
+
+#loading-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#loading {
+    font-family: $mono-font;
+    font-size: 2em;
+    font-weight: bold;
+    transform: translateX(calc(50vw - 4ch));
+
+    &:after {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        
+        -webkit-animation: ellipsis steps(4, end) 500ms infinite;
+        animation: ellipsis steps(4, end) 500ms infinite;
+        content: "...";
+        /* ascii code for the ellipsis character */
+        width: 0px;
+    }
+}
+
+@keyframes ellipsis {
+    to {
+        width: 4ch;
+    }
+}
+  
+@-webkit-keyframes ellipsis {
+    to {
+        width: 4ch;
+    }
+}

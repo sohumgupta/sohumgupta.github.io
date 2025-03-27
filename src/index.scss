@@ -1,10 +1,18 @@
-@import 'https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700';
 @import 'https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap';
 
-// $mono-font: 'Anonymous Pro', 'Courier New', Courier, monospace;
 $mono-font: 'Xanh Mono', 'Courier New', Courier, monospace;
+// $body-font: 'Rethink Sans', sans-serif;
 $body-font: 'Funnel Sans', sans-serif;
+
+$body-font-sz-1: 2rem;
+$body-font-sz-2: 1.5rem;
+$body-font-sz-3: 1rem;
+
+$mono-font-sz-1: 1.8rem;
+$mono-font-sz-2: 1.35rem;
+$mono-font-sz-3: 0.9rem;
 
 *, html, body {
   box-sizing: border-box;
