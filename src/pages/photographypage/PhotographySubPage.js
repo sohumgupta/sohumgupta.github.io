@@ -7,6 +7,10 @@ import { useLocation } from 'react-router-dom';
 
 import albumIDs from './AlbumIDs';
 
+function mod(n, m) {
+    return ((n % m) + m) % m;
+}
+
 function ImageCarousel() {
     let path = useLocation().pathname;
     let album = path.slice(path.lastIndexOf("/") + 1, path.length);
@@ -24,8 +28,8 @@ function ImageCarousel() {
         return(<div className="dots">{arr.map(input=>input)}</div>);
     }
 
-    const handleNext = () => { setImgID((imgID + 1) % numIDs); };
-    const handlePrev = () => { setImgID((imgID - 1) % numIDs); };
+    const handleNext = () => { setImgID(mod((imgID + 1), numIDs)); };
+    const handlePrev = () => { setImgID(mod((imgID - 1), numIDs)); };
     const handleDot = (i) => { setImgID(i); };
 
     return (
