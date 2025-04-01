@@ -2,9 +2,9 @@ import './Content.scss';
 
 function Content({ children }) {
     return (
-        <div id="content-wrapper">
-            { children }
-        </div>
+        // <div id="content-wrapper">
+            <>{ children }</>
+        // </div>
     )
 }
 

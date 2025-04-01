@@ -6,8 +6,9 @@ import Content from '../content/Content';
 function Page({ children }) {
     return (
         <div id="page-wrapper">
-            <Nav/>
-            <Content>{children}</Content>
+            <div id="nav-wrapper"><Nav/></div>
+            <div id="content-wrapper">{children}</div>
+            <div id="right-wrapper"><Nav/></div>
         </div>
     )
 }
