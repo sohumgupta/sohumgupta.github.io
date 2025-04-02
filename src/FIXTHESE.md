@@ -1,12 +1,34 @@
 # general
 - make text paragraphs justified?
+- image loading times!!! [USE SOME IMAGE LIBRARY???]
+
+## nav
+- remove bio link
+- maybe remove italics or right-facing movement on hover?
+
+## photo page
+- show all the photo places in nav bar when you're on the photo page
 
 ## about page
 - make social media links more pronounced?
 
+## writing page
+- definitely work on the categories lol
+- put dates on different line? 
+- too visually dense
+- icons?
+
+## resume
+- make it a separate page w embedded preview?
+
 # phone
 
+## nav
+- make the box shadow a lot softer/generally nicer lol
+- hamburger menu is close to left margin
+
 ## home page
+- Add something else on the home screen??? like more text or something??
 - On the home page, the menu hamburger icon is really small.
 - Also, on my phone, the bottom part (where the gesture bar is) stays white.
 
