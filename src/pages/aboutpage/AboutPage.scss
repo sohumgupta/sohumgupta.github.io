@@ -52,21 +52,52 @@
         height: fit-content;
 
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 2em;
 
         a { color: black; }
 
-        .contact-info {
-            font-family: $mono-font;
-            font-size: $mono-font-sz-3;
-            font-weight: bold;
+        .contact-wrapper-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
 
-            &:hover {
-                font-style: italic;
+            .contact-info {
+                font-family: $mono-font;
+                font-size: $mono-font-sz-3;
+                font-weight: bold;
+    
+                &:hover {
+                    font-style: italic;
+                }
+            }
+
+            .contact-logo {
+                font-size: 1.25rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    fill: white;
+                    stroke-width: 4px;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    overflow: visible;
+                    paint-order: stroke;
+                }
+            }
+
+            a:nth-of-type(2) {
+                .contact-logo {
+                    font-size: 1.4rem;
+                }
             }
         }
+
     }
 }

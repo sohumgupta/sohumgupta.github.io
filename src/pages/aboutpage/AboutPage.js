@@ -1,19 +1,14 @@
 import './AboutPage.scss';
 import Page from '../../layout/page/Page';
-import Image from '../../layout/image/Image';
 
-import useImagePreloader from '../../misc/UseImagePreloader';
-import LoadingScreen from '../../misc/loading/LoadingScreen';
-
-import { NavLink } from "react-router-dom";
+import { SiSubstack, SiLinkedin, SiGithub, SiInstagram } from "react-icons/si";
+import { RiInstagramFill } from "react-icons/ri";
 
 const contacts = [
-    { text: "sohum_gupta@alumni.brown.edu", link: "mailto:sohum_gupta@alumni.brown.edu" },
-    { text: "630-397-1796", link: "tel:+16303971796" },
-    { text: "LinkedIn", link: "https://www.linkedin.com/in/sohum-gupta/" },
-    { text: "Instagram", link: "https://www.instagram.com/sohum_gupta/" },
-    { text: "Substack", link: "https://sohumgupta.substack.com/" },
-    { text: "GitHub", link: "https://github.com/sohumgupta" },
+    { text: <SiLinkedin/>, link: "https://www.linkedin.com/in/sohum-gupta/" },
+    { text: <RiInstagramFill/>, link: "https://www.instagram.com/sohum_gupta/" },
+    { text: <SiSubstack/>, link: "https://sohumgupta.substack.com/" },
+    { text: <SiGithub/>, link: "https://github.com/sohumgupta" },
 ];
 
 function AboutPage() {
@@ -45,13 +40,23 @@ function AboutPage() {
                     </div>
                 </div>
                 <div id="contact-wrapper">
-                    {
-                        contacts.map((c, i) => 
-                            <a href={c.link} key={i} target="_blank" rel="noopener noreferrer">
-                                <div className="contact-info">{c.text}</div>
-                            </a>
-                        )
-                    }
+                    <div className="contact-wrapper-row">
+                        <a href="mailto:sohum_gupta@alumni.brown.edu">
+                            <div className="contact-info">sohum_gupta@alumni.brown.edu</div>
+                        </a>
+                        <a href="tel:6303971796">
+                            <div className="contact-info">(630)397-1796</div>
+                        </a>
+                    </div>
+                    <div className="contact-wrapper-row">
+                        {
+                            contacts.map((c, i) => 
+                                <a href={c.link} key={i} target="_blank" rel="noopener noreferrer">
+                                    <div className="contact-info contact-logo">{c.text}</div>
+                                </a>
+                            )
+                        }
+                    </div>
                 </div>
             </div>
         </Page>
