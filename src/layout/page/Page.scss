@@ -1,3 +1,5 @@
+@import '../../index.scss';
+
 #page-wrapper {
     position: absolute;
     width: 100%;
@@ -5,7 +7,6 @@
     overflow-x: hidden;
 
     background-color: white;
-    z-index: 1;
 
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -18,7 +19,7 @@
         align-items: flex-start;
         justify-content: center;
 
-        padding: 2rem;
+        padding: 0 4rem;
     
         color: black;
     }
@@ -30,5 +31,32 @@
 
     #right-wrapper {
         visibility: hidden;
+    }
+
+    @include for-size(laptop) {
+        #content-wrapper { padding-right: 4rem; }
+        #right-wrapper { display: none; }
+    }
+
+    @include for-size(phone) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #nav-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2;
+
+            width: fit-content;
+            height: 100%;
+
+            background-color: white;
+            color: black !important;
+        }
+        
+        #content-wrapper { padding: 2rem; z-index: 1; }
+        #right-wrapper { display: none; }
     }
 }

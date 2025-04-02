@@ -10,13 +10,10 @@ import PhotographySubPage from './pages/photographypage/PhotographySubPage';
 import WritingPage from "./pages/writingpage/WritingPage";
 import AboutPage from "./pages/aboutpage/AboutPage";
 
-import ResponsivePage from "./layout/responsivepage/ResponsivePage";
-
 function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route path="*" element={<ResponsivePage/>}/> */}
         <Route path="/photography" element={<PhotographyPage/>}/>
         <Route path="/photography/*" element={<PhotographySubPage/>}/>
         <Route path="/writing" element={<WritingPage/>}/>

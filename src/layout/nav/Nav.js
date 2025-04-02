@@ -1,6 +1,9 @@
 import './Nav.scss';
 
+import useWindowDimensions from "../hooks/useWindowDimensions";
+import { useState } from 'react';
 import { NavLink, useLocation } from "react-router-dom";
+
   
 let navLinks = [
     { linkText: "Sohum Gupta", href: "/", outerText: ""},
@@ -30,9 +33,12 @@ function NavRow({ link }) {
 }
 
 function Nav() {
+    let [open, setOpen] = useState(false);
+
     let path = useLocation().pathname;
     let lastPath = path.slice(path.lastIndexOf("/") + 1, path.length);
     
+    let newNavLinks = navLinks.slice();
     if (path.includes("/photography") && lastPath !== "photography") {
         let nameMap = {
             "oahu": "Oahu","arizona": "Arizona", "amsterdam": "Amsterdam", 
@@ -40,22 +46,17 @@ function Nav() {
             "new%20england": "New England", "cancun": "Cancun", "illinois": "Illinois",
             "florida": "Florida", "san%20francisco": "San Francisco", "quebec%20city": "Quebec City"
         }
-        let newNavLinks = navLinks.toSpliced(4, 0, { linkText: nameMap[lastPath], href: "#", outerText: "│\u00a0\u00a0\u00a0└── "});
-        return (
-            <div id="nav-wrapper">
-                <div id="nav-list">
-                    { newNavLinks.map((l, i) => <NavRow link={l} key={i}/>) }
-                </div>
-            </div>
-        )
+        newNavLinks = navLinks.toSpliced(4, 0, { linkText: nameMap[lastPath], href: "#", outerText: "│\u00a0\u00a0\u00a0└── "});
     }
 
     return (
-        <div id="nav-wrapper">
-            <div id="nav-list">
-                { navLinks.map((l, i) => <NavRow link={l} key={i}/>) }
+        <>
+            <div id="nav-list" className={open ? "" : "nav-closed"}>
+                { newNavLinks.map((l, i) => <NavRow link={l} key={i}/>) }
+                <button id="nav-close" onClick={() => setOpen(false)}>✕</button>
             </div>
-        </div>
+            <button id="nav-open" onClick={() => setOpen(true)}>☰</button>
+        </>
     )
 }
 

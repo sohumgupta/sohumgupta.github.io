@@ -10,6 +10,8 @@
     position: sticky;
     top: 4rem;
 
+    #nav-close { display: none; }
+
     >*:first-child {
         font-size: $body-font-sz-1;
         font-family: $body-font;
@@ -46,4 +48,52 @@
 
     .level-two { margin-left: 0em; }
     .level-three { margin-left: 3ch; }
+}
+
+#nav-open { display: none; }
+
+@include for-size(phone) {
+    #nav-list {
+        z-index: 1;
+
+        #nav-close {
+            display: block;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            font-size: $mono-font-sz-2;
+        }    
+    }
+
+    #nav-open {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        font-family: $mono-font;
+        font-size: $mono-font-sz-2;
+        
+        transition: transform .25s ease;
+        transform: translateX(0vw);
+
+        pointer-events: none;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    #nav-wrapper {
+        box-shadow: 0 0 1em black;
+
+        transition: transform .25s ease;
+
+        &:has(.nav-closed) {
+            transform: translateX(-100vw);
+
+            #nav-open { 
+                transform: translateX(100vw);
+                pointer-events: all;
+                opacity: 1;
+            } 
+        }
+    }
 }

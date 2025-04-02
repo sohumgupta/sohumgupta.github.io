@@ -15,10 +15,67 @@ $mono-font-sz-2: 1.35rem;
 $mono-font-sz-3: 1.01rem;
 
 *, html, body {
-  box-sizing: border-box;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
-  text-decoration: none;
+	text-decoration: none;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+/* Element First Media Queries
+========================================================= */
+
+// A map of breakpoints.
+$breakpoints: (
+	phone: 480px,
+	tablet: 768px,
+	laptop: 1279px,
+	desktop: 1280px
+);
+
+@mixin for-size($breakpoint, $direction:down) {
+
+	// If the breakpoint exists in the map.
+	@if map-has-key($breakpoints, $breakpoint) {
+
+		// Get the breakpoint value.
+		$breakpoint-value: map-get($breakpoints, $breakpoint);
+
+		// Determine the direction and then write the media query.
+		@if $direction == up {
+			@media (min-width: $breakpoint-value) {
+				@content;
+			}
+		}
+		@else if $direction == down {
+			@media (max-width: $breakpoint-value) {
+				@content;
+			}
+		}
+	}
+	// If the breakpoint doesn't exist in the map, pass a manual breakpoint
+	@else {
+		@if $direction == up {
+			@media (min-width: $breakpoint) {
+				@content;
+			}
+		}
+		@else if $direction == down {
+			@media (max-width: $breakpoint) {
+				@content;
+			}
+		}
+	}
 }

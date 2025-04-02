@@ -50,4 +50,8 @@
             }
         }
     }
+
+    @include for-size(laptop) {
+        grid-template-columns: 1fr;
+    }
 }

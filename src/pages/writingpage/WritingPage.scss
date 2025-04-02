@@ -2,21 +2,19 @@
 
 #writing-page-wrapper {
     width: 100%;
-    height: 100%;
+    height: fit-content;
+    min-height: 100%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    padding: 4vh 0;
-    gap: 4vh;
-
     h1 {
         font-family: $body-font;
         font-weight: bold;
         font-size: $body-font-sz-1;
-        margin-top: 0.5em;
+        margin-top: 1rem;
     }
 
     .writing-wrapper {
@@ -25,21 +23,17 @@
         display: flex;
         flex-direction: column;
 
-        gap: 0.5em;
+        gap: 1rem;
 
         .writing {
             width: 100%;            
             display: flex;
             flex-direction: column;
-            gap: 0.25em;
-            // padding-left: 3em;
-
             color: black;
             transition: padding 0.5s ease;
 
             &:hover { 
                 .writing-main { font-style: italic; }
-                // .writing-description { padding-left: 0.5em; }
             }
 
             .writing-description {
@@ -59,7 +53,7 @@
 
                 .writing-date {
                     font-family: $mono-font;
-                    padding-right: 0.5em;
+                    padding-right: 1ch;
                     font-size: $mono-font-sz-2;
                     text-decoration: none;
                 }

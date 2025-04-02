@@ -97,3 +97,23 @@
         }
     }
 }
+
+@include for-size(tablet) {
+    #page-wrapper:has(#photography-sub-page-wrapper) {
+        grid-template-columns: auto;
+        grid-template-rows: auto fit-content;
+        max-height: 100%;
+
+        #nav-wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding-top: 4rem;
+        }
+
+        #content-wrapper {
+            overflow: hidden;
+            padding: 0 2rem;
+        }
+    }
+}
