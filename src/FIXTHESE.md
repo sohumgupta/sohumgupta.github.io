@@ -1,6 +1,6 @@
 # general
 - ~~make text paragraphs justified?~~
-- image loading times!!! [USE SOME IMAGE LIBRARY???]
+-image loading times!!! [USE SOME IMAGE LIBRARY???]
 - ~~cached loading on photo sub-page!~~
 
 ## nav
@@ -9,9 +9,10 @@
 
 ## photo page
 - ~~show all the photo places in nav bar when you're on the photo page~~
+- FIGURE OUT BETTER SYSTEM FOR DOTS ON SUBPAGE! ESPECIALLY IF THEY OVERFLOW!!!
 
 ## about page
-- make social media links more pronounced?
+- ~~make social media links more pronounced?~~
 
 ## writing page
 - definitely work on the categories lol
@@ -36,8 +37,8 @@
 - ~~make font sizes smaller?~~
 
 ## photo sub-page
-- the arrows are really big, and there could easily be more space for the pictures.
-- the dot placement is also a bit strange
+- ~~the arrows are really big, and there could easily be more space for the pictures.~~
+- ~~the dot placement is also a bit strange~~
 - ~~make it swipeable?? [USE REACT-SWIPEABLE]~~
 
 ## about page
