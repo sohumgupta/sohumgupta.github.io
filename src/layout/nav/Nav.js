@@ -30,7 +30,7 @@ function Nav() {
             newNavLinks = navLinks.toSpliced(4, 0, ...navPhotoAlbums);
         } else {
             let currAlbum = navPhotoAlbums.filter(a => a.href == path)[0];
-            newNavLinks = navLinks.toSpliced(4, 0, {linkText: currAlbum["linkText"], href: currAlbum["href"], outerText: "│\u00a0\u00a0\u00a0└── "});
+            newNavLinks = navLinks.toSpliced(4, 0, {linkText: currAlbum["linkText"], href: currAlbum["href"], outerText: "│\u00a0\u00a0\u00a0\u00a0└── "});
         }
     }
 
