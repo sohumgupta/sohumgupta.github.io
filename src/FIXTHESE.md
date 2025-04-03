@@ -24,16 +24,16 @@
 
 ## nav
 - ~~make the box shadow a lot softer/generally nicer lol~~
-- hamburger menu is close to left margin
+- ~~hamburger menu is close to left margin~~
 
 ## home page
-- Add something else on the home screen??? like more text or something??
-- On the home page, the menu hamburger icon is really small.
-- Also, on my phone, the bottom part (where the gesture bar is) stays white.
+- ~~Add something else on the home screen??? like more text or something??~~
+- ~~On the home page, the menu hamburger icon is really small.~~
+- ~~Also, on my phone, the bottom part (where the gesture bar is) stays white.~~
 
 ## writing page
-- the padding/whitespace is sort of weird, especially at the top and bottom
-- make font sizes smaller?
+- ~~the padding/whitespace is sort of weird, especially at the top and bottom~~
+- ~~make font sizes smaller?~~
 
 ## photo sub-page
 - the arrows are really big, and there could easily be more space for the pictures.

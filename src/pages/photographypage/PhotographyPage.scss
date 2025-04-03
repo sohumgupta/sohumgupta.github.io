@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
 
-    margin: 4vh 0;
+    padding: 4rem 0;
     gap: 4vh;
 
     .album-cover {
@@ -54,4 +54,10 @@
     @include for-size(laptop) {
         grid-template-columns: 1fr;
     }
+
+    @include for-size(phone) {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
 }

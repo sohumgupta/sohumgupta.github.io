@@ -40,7 +40,10 @@ function Nav() {
                 { newNavLinks.map((l, i) => <NavRow link={l} key={i}/>) }
                 <button id="nav-close" onClick={() => setOpen(false)}>✕</button>
             </div>
-            <button id="nav-open" onClick={() => setOpen(true)}>☰</button>
+            <div id="nav-open">
+                <button onClick={() => setOpen(true)}>☰</button>
+                Sohum Gupta
+            </div>
         </>
     )
 }

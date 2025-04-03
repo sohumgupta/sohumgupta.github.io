@@ -56,7 +56,12 @@
             color: black !important;
         }
         
-        #content-wrapper { padding: 2rem; z-index: 1; }
+        #content-wrapper { 
+            padding: 2rem; 
+            padding-top: 4rem;
+            z-index: 1; 
+        }
+
         #right-wrapper { display: none; }
     }
 }

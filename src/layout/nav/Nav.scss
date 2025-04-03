@@ -67,19 +67,29 @@
     }
 
     #nav-open {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        padding: 1rem 2rem;
+        position: relative;
+
+        button { position: absolute; left: 0; padding: inherit; }
+
         position: fixed;
-        top: 1rem;
-        left: 1rem;
-        font-family: $mono-font;
-        font-size: $mono-font-sz-2;
+        top: 0;
+        left: 0;
+        font-family: $body-font;
+        font-size: $body-font-sz-1;
+        font-weight: bold;
+
+        background-color: white;
         
         transition: transform .25s ease;
-        transform: translateX(0vw);
+        transform: translateX(0vw) translateY(-5vh);
 
         pointer-events: none;
         opacity: 0;
-        z-index: 1;
     }
 
     #nav-wrapper {
@@ -91,7 +101,7 @@
             transform: translateX(-100vw);
 
             #nav-open { 
-                transform: translateX(100vw);
+                transform: translateX(100vw) translateY(0vh);
                 pointer-events: all;
                 opacity: 1;
             } 
