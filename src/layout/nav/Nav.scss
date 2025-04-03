@@ -98,10 +98,10 @@
         transition: transform .25s ease;
 
         &:has(.nav-closed) {
-            transform: translateX(-100vw);
+            transform: translateX(-120vw);
 
             #nav-open { 
-                transform: translateX(100vw) translateY(0vh);
+                transform: translateX(120vw) translateY(0vh);
                 pointer-events: all;
                 opacity: 1;
             } 
