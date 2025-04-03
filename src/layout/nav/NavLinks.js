@@ -14,14 +14,15 @@ export let navLinks = [
 
 export let navPhotoAlbums = [
     { linkText: "Oahu", href: "/photography/oahu", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
-    { linkText: "Arizona", href: "/photography/arizona", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     { linkText: "Amsterdam", href: "/photography/amsterdam", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     { linkText: "Berlin", href: "/photography/berlin", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
+    { linkText: "Copenhagen", href: "/photography/copenhagen", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
+    // { linkText: "Arizona", href: "/photography/arizona", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     { linkText: "Ghana", href: "/photography/ghana", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     { linkText: "New England", href: "/photography/new%20england", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     { linkText: "Cancun", href: "/photography/cancun", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
-    { linkText: "Illinois", href: "/photography/illinois", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     { linkText: "Florida", href: "/photography/florida", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
+    { linkText: "Illinois", href: "/photography/illinois", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     { linkText: "San Francisco", href: "/photography/san%20francisco", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     { linkText: "Quebec City", href: "/photography/quebec%20city", outerText: "│\u00a0\u00a0\u00a0\u00a0└── "},
 ]
