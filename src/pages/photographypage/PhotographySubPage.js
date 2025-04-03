@@ -55,13 +55,15 @@ function ImageCarousel() {
         trackMouse: true
     });
 
+    let touchScreen = (window.matchMedia("(pointer: coarse)").matches);
+
     return (
         <div className="image-carousel" {...handlers}>
             {/* <div className="description">{albumIDs[album]["descrip"]}</div> */}
             <div className="content">
-                <div className="prev-button" onClick={handlePrev}>←</div>
+                <div className={"prev-button " + (touchScreen ? "touch" : "")} onClick={handlePrev}>←</div>
                 <Image src={"https://i.imgur.com/" + ids[imgID] + ".jpg"} imgClass="carousel-image"/>
-                <div className="next-button" onClick={handleNext}>→</div>
+                <div className={"next-button " + (touchScreen ? "touch" : "")} onClick={handleNext}>→</div>
             </div>
             {createDots()}
             

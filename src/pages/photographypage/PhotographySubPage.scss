@@ -55,6 +55,10 @@
 
                     img { object-fit: contain; }
                 }
+
+                .touch {
+                    display: none;
+                }
                             
                 .prev-button, .next-button { 
                     height: fit-content;
