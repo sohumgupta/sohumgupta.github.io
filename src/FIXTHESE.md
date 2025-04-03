@@ -1,22 +1,21 @@
 # general
-- make text paragraphs justified?
+- ~~make text paragraphs justified?~~
 - image loading times!!! [USE SOME IMAGE LIBRARY???]
+- ~~cached loading on photo sub-page!~~
 
 ## nav
-- remove bio link
-- maybe remove italics or right-facing movement on hover?
+- ~~remove bio link~~
+- ~~maybe remove italics or right-facing movement on hover?~~
 
 ## photo page
-- show all the photo places in nav bar when you're on the photo page
+- ~~show all the photo places in nav bar when you're on the photo page~~
 
 ## about page
 - make social media links more pronounced?
 
 ## writing page
 - definitely work on the categories lol
-- put dates on different line? 
-- too visually dense
-- icons?
+- ~~too visually dense~~
 
 ## resume
 - make it a separate page w embedded preview?
@@ -24,7 +23,7 @@
 # phone
 
 ## nav
-- make the box shadow a lot softer/generally nicer lol
+- ~~make the box shadow a lot softer/generally nicer lol~~
 - hamburger menu is close to left margin
 
 ## home page
@@ -39,8 +38,7 @@
 ## photo sub-page
 - the arrows are really big, and there could easily be more space for the pictures.
 - the dot placement is also a bit strange
-- make it swipeable?? [USE REACT-SWIPEABLE]
+- ~~make it swipeable?? [USE REACT-SWIPEABLE]~~
 
 ## about page
-- email and phone number don't fit on same line, put them in column?
-
+- ~~email and phone number don't fit on same line, put them in column?~~

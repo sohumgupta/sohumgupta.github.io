@@ -3,21 +3,7 @@ import './Nav.scss';
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import { useState } from 'react';
 import { NavLink, useLocation } from "react-router-dom";
-
-  
-let navLinks = [
-    { linkText: "Sohum Gupta", href: "/", outerText: ""},
-    { linkText: "Projects", href: "/projects", outerText: "├── "},
-    { linkText: "Writing", href: "/writing", outerText: "├── "},
-    // { linkText: "Food", href: "/writing#food", outerText: "│\u00a0\u00a0\u00a0├── "},
-    // { linkText: "Creative", href: "/writing#creative", outerText: "│\u00a0\u00a0\u00a0├── "},
-    // { linkText: "Misc.", href: "/writing#misc", outerText: "│\u00a0\u00a0\u00a0└── "},
-    { linkText: "Photography", href: "/photography", outerText: "├── "},
-    { linkText: "About", href: "/about", outerText: "└── "},
-    { linkText: "Bio", href: "/about#bio", outerText: "\u00a0\u00a0\u00a0\u00a0├── "},
-    // { linkText: "Contact", href: "/about#contact", outerText: "\u00a0\u00a0\u00a0\u00a0├── "},
-    { linkText: "Resume", href: "https://drive.google.com/file/d/1FujUdpdkA5r8pBYvCMapaCI0uenfmo2l/view?usp=sharing", outerText: "\u00a0\u00a0\u00a0\u00a0└── "},
-]
+import { navLinks, navPhotoAlbums } from './NavLinks';
 
 function NavRow({ link }) {
     const location = useLocation();
@@ -36,17 +22,16 @@ function Nav() {
     let [open, setOpen] = useState(false);
 
     let path = useLocation().pathname;
-    let lastPath = path.slice(path.lastIndexOf("/") + 1, path.length);
+    let lastPath = path.slice(path.lastIndexOf("/"), path.length);
     
     let newNavLinks = navLinks.slice();
-    if (path.includes("/photography") && lastPath !== "photography") {
-        let nameMap = {
-            "oahu": "Oahu","arizona": "Arizona", "amsterdam": "Amsterdam", 
-            "berlin": "Berlin", "copenhagen": "Copenhagen", "ghana": "Ghana", 
-            "new%20england": "New England", "cancun": "Cancun", "illinois": "Illinois",
-            "florida": "Florida", "san%20francisco": "San Francisco", "quebec%20city": "Quebec City"
+    if (path.includes("/photography")) {
+        if (lastPath == "/photography") {
+            newNavLinks = navLinks.toSpliced(4, 0, ...navPhotoAlbums);
+        } else {
+            let currAlbum = navPhotoAlbums.filter(a => a.href == path)[0];
+            newNavLinks = navLinks.toSpliced(4, 0, {linkText: currAlbum["linkText"], href: currAlbum["href"], outerText: "│\u00a0\u00a0\u00a0└── "});
         }
-        newNavLinks = navLinks.toSpliced(4, 0, { linkText: nameMap[lastPath], href: "#", outerText: "│\u00a0\u00a0\u00a0└── "});
     }
 
     return (

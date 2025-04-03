@@ -10,8 +10,8 @@
     justify-content: center;
     align-items: center;
 
-    padding: 4vh 0;
-    gap: 4em;
+    padding: 2rem 0;
+    gap: 2rem;
 
     #bio-wrapper {
         display: flex;
@@ -19,7 +19,7 @@
         justify-content: center;
         align-items: center;
 
-        gap: 2em;
+        gap: 2rem;
 
         #bio-picture {
             width: 15em;
@@ -34,7 +34,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            gap: 1em;
+            gap: 1rem;
+
+            text-align: justify;
     
             font-family: $body-font;
             font-size: $body-font-sz-3;
@@ -55,16 +57,22 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2em;
+        gap: 2rem;
 
         a { color: black; }
+
+        @include for-size(phone) {
+            div:first-child {
+                flex-direction: column;
+            }
+        }
 
         .contact-wrapper-row {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 2em;
+            gap: 2rem;
 
             .contact-info {
                 font-family: $mono-font;

@@ -2,8 +2,9 @@ import './PhotographySubPage.scss';
 import Page from '../../layout/page/Page';
 import Image from '../../layout/image/Image';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useSwipeable } from 'react-swipeable';
 
 import albumIDs from './AlbumIDs';
 
@@ -11,12 +12,26 @@ function mod(n, m) {
     return ((n % m) + m) % m;
 }
 
+const preloadImages = (ids) => {
+    ids.forEach((id) => {
+        const img = <img src={`https://i.imgur.com/${id}.jpg`}/>;
+        // console.log(img);
+        // img.src = `https://i.imgur.com/${id}.jpg`;
+    });
+};
+  
+
 function ImageCarousel() {
     let path = useLocation().pathname;
     let album = path.slice(path.lastIndexOf("/") + 1, path.length);
 
     let ids = albumIDs[album]["ids"];
     let numIDs = ids.length;
+
+    useEffect(() => {
+        if (!ids?.length) return; 
+        preloadImages(ids);
+    }, [ids]);
 
     const [imgID, setImgID] = useState(0);
 
@@ -32,8 +47,16 @@ function ImageCarousel() {
     const handlePrev = () => { setImgID(mod((imgID - 1), numIDs)); };
     const handleDot = (i) => { setImgID(i); };
 
+    const handlers = useSwipeable({
+        onSwipedLeft: handleNext,
+        onSwipedRight: handlePrev,
+        swipeDuration: 500,
+        preventScrollOnSwipe: true,
+        trackMouse: true
+    });
+
     return (
-        <div className="image-carousel">
+        <div className="image-carousel" {...handlers}>
             {/* <div className="description">{albumIDs[album]["descrip"]}</div> */}
             <div className="content">
                 <div className="prev-button" onClick={handlePrev}>←</div>
