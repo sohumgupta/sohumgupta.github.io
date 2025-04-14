@@ -1,7 +1,7 @@
 {
   "name": "sohumgupta.github.io",
   "version": "0.1.0",
-  "homepage": "https://sohumgupta.github.io",
+  "homepage": "https://sohumgupta.com",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
