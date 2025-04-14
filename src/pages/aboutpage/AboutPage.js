@@ -7,7 +7,7 @@ import { RiInstagramFill } from "react-icons/ri";
 const contacts = [
     { text: <SiLinkedin/>, link: "https://www.linkedin.com/in/sohum-gupta/" },
     { text: <RiInstagramFill/>, link: "https://www.instagram.com/sohum_gupta/" },
-    { text: <SiSubstack/>, link: "https://sohumgupta.substack.com/" },
+    { text: <SiSubstack/>, link: "https://substack.com/@sohumgupta" },
     { text: <SiGithub/>, link: "https://github.com/sohumgupta" },
 ];
 

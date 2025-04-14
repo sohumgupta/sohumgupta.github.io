@@ -9,7 +9,7 @@ export let navLinks = [
     { linkText: "About", href: "/about", outerText: "└── "},
     // { linkText: "Bio", href: "/about#bio", outerText: "\u00a0\u00a0\u00a0\u00a0\u00a0├── "},
     // { linkText: "Contact", href: "/about#contact", outerText: "\u00a0\u00a0\u00a0\u00a0\u00a0├── "},
-    { linkText: "Resume", href: "https://drive.google.com/file/d/1FujUdpdkA5r8pBYvCMapaCI0uenfmo2l/view?usp=sharing", outerText: "\u00a0\u00a0\u00a0\u00a0\u00a0└── "},
+    { linkText: "Resume", href: "/about/resume", outerText: "\u00a0\u00a0\u00a0\u00a0\u00a0└── "},
 ]
 
 export let navPhotoAlbums = [

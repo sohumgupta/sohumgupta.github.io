@@ -6,18 +6,18 @@ import LoadingScreen from '../../misc/loading/LoadingScreen';
 import { NavLink } from "react-router-dom";
 import useImagePreloader from '../../misc/UseImagePreloader';
 
-import HWIPic from './thumbnails/hwi_pic.jpg';
+import HWIPic from './thumbnails/hwi_pic.webp';
 // import AZPic from './thumbnails/az_pic.jpg';
-import AMSPic from './thumbnails/ams_pic.jpg';
-import BERPic from './thumbnails/ber_pic.jpg';
-import CPHPic from './thumbnails/cph_pic.jpg';
-import GhanaPic from './thumbnails/ghana_pic.jpg';
-import PVDPic from './thumbnails/pvd_pic.jpg';
-import CANPic from './thumbnails/can_pic.jpg';
+import AMSPic from './thumbnails/ams_pic.webp';
+import BERPic from './thumbnails/ber_pic.webp';
+import CPHPic from './thumbnails/cph_pic.webp';
+import GhanaPic from './thumbnails/ghana_pic.webp';
+import PVDPic from './thumbnails/pvd_pic.webp';
+import CANPic from './thumbnails/can_pic.webp';
 // import ILLPic from './thumbnails/ill_pic.jpg';
-import FLOPic from './thumbnails/flo_pic.jpg';
-import SFPic from './thumbnails/sf_pic.jpg';
-import QBCPic from './thumbnails/qbc_pic.jpg';
+import FLOPic from './thumbnails/flo_pic.webp';
+import SFPic from './thumbnails/sf_pic.webp';
+import QBCPic from './thumbnails/qbc_pic.webp';
 
 const preloadSrcList = [
     HWIPic,
@@ -65,7 +65,7 @@ function PhotographyPage() {
     const { imagesPreloaded } = useImagePreloader(preloadSrcList);
 
     if (!imagesPreloaded) {
-        return <LoadingScreen/>
+        // return <LoadingScreen/>
     }
 
     return (

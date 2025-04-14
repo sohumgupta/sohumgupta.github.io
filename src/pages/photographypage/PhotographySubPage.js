@@ -2,7 +2,7 @@ import './PhotographySubPage.scss';
 import Page from '../../layout/page/Page';
 import Image from '../../layout/image/Image';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
 
@@ -40,8 +40,15 @@ function ImageCarousel() {
         for (let i = 0; i < numIDs; i++) { 
             arr.push(<div key={i} onClick={() => handleDot(i)} className={"dot" + (i === imgID ? " active" : "")}>•</div>)
         }
-        return(<div className="dots">{arr.map(input=>input)}</div>);
+        return(<div className="dots" ref={dotsContainerRef}>{arr.map(input=>input)}</div>);
     }
+
+    useEffect(() => {
+        const activeDot = dotsContainerRef.current?.querySelector('.dot.active');
+        activeDot?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    }, [imgID]);
+    
+    const dotsContainerRef = useRef(null);
 
     const handleNext = () => { setImgID(mod((imgID + 1), numIDs)); };
     const handlePrev = () => { setImgID(mod((imgID - 1), numIDs)); };
@@ -62,11 +69,12 @@ function ImageCarousel() {
             {/* <div className="description">{albumIDs[album]["descrip"]}</div> */}
             <div className="content">
                 <div className={"prev-button " + (touchScreen ? "touch" : "")} onClick={handlePrev}>←</div>
-                <Image src={"https://i.imgur.com/" + ids[imgID] + ".jpg"} imgClass="carousel-image"/>
+                <Image src={"https://i.imgur.com/" + ids[imgID] + "h.jpg"} imgClass="carousel-image"/>
                 <div className={"next-button " + (touchScreen ? "touch" : "")} onClick={handleNext}>→</div>
             </div>
-            {createDots()}
-            
+            <div className="dots-wrapper">
+                {createDots()}
+            </div>
         </div>
         
     )

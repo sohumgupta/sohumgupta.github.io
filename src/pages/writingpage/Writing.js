@@ -6,12 +6,12 @@ let writing = [
     {
         section: "Food",
         pieces: [
-            { 
-                title: "Framing the Aangan: Cooking and Gender in Indian Cinema and TV",
-                date: "Mar 2025",
-                description: <>A piece examining the role of the <i>aangan</i>, or inner courtyard, in Indian popular media, especially how it relates to women's role as cook within the space.</>,
-                link: ""
-            },
+            // { 
+            //     title: "Framing the Aangan: Cooking and Gender in Indian Cinema and TV",
+            //     date: "Mar 2025",
+            //     description: <>A piece examining the role of the <i>aangan</i>, or inner courtyard, in Indian popular media, especially how it relates to women's role as cook within the space.</>,
+            //     link: ""
+            // },
             { 
                 title: "Chasing Chaat",
                 date: "Dec 2021",
@@ -20,8 +20,19 @@ let writing = [
             }
         ]
     },
+    // {
+    //     section: "Creative",
+    //     pieces: [
+    //         { 
+    //             title: "Blisters",
+    //             date: "Dec 2022",
+    //             description: <>A short creative non-fiction piece about maize, race, and my experiences as a "white man" in rural Ghana.</>,
+    //             link: ""
+    //         },
+    //     ]
+    // },
     {
-        section: "Creative",
+        section: "Comics",
         pieces: [
             {
                 title: "Old Hustle",
@@ -37,17 +48,6 @@ let writing = [
             }
         ]
     },
-    {
-        section: "Misc.",
-        pieces: [
-            { 
-                title: "Blisters",
-                date: "Dec 2022",
-                description: <>A short creative non-fiction piece about maize, race, and my experiences as a "white man" in rural Ghana.</>,
-                link: ""
-            },
-        ]
-    }
 ];
 
 export default writing;

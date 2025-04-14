@@ -68,16 +68,58 @@
                     cursor: pointer;
                 }
             }
-    
-            .dots { 
+
+            .dots-wrapper {
                 grid-column: 1/4;
                 height: fit-content;
+                max-width: 100%;
+
+                position: relative;
+                margin: 0 auto;
+              
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 3em;
+                    z-index: 2;
+                    pointer-events: none;
+                }
+              
+                &::before {
+                    left: 0;
+                    background: linear-gradient(to right, white, transparent);
+                }
+              
+                &::after {
+                    right: 0;
+                    background: linear-gradient(to left, white, transparent);
+                }
+            }
+    
+            .dots { 
+                // grid-column: 1/4;
+                // height: fit-content;
+                // max-width: 100%;
     
                 display: flex;
                 align-items: center;
-                justify-content: center;
-    
+                justify-content: flex-start;
+                position: relative;
+
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
+                scroll-snap-type: x mandatory;
+
+                padding: 0.5em 2em;
                 gap: 0.25em;
+
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                &::-webkit-scrollbar { display: none;}
             }
     
             .dot {
@@ -85,6 +127,10 @@
                 font-size: 2em;
                 opacity: 0.25;
                 cursor: pointer;
+
+                scroll-snap-align: center;
+                flex-shrink: 0;
+                transition: opacity 0.25s ease;
             }
     
             .active {
@@ -105,7 +151,8 @@
 @include for-size(tablet) {
     #page-wrapper:has(#photography-sub-page-wrapper) {
         grid-template-columns: auto;
-        grid-template-rows: auto fit-content;
+        grid-template-rows: auto 1fr;
+        height: 100%;
         max-height: 100%;
 
         #nav-wrapper {
@@ -113,6 +160,7 @@
             align-items: flex-start;
             justify-content: flex-start;
             padding-top: 4rem;
+            height: fit-content;
         }
 
         #content-wrapper {

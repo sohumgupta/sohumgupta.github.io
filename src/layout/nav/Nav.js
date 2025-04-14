@@ -42,7 +42,7 @@ function Nav() {
             </div>
             <div id="nav-open">
                 <button onClick={() => setOpen(true)}>☰</button>
-                Sohum Gupta
+                <NavLink to={"/"}>Sohum Gupta</NavLink>
             </div>
         </>
     )

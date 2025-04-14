@@ -9,6 +9,7 @@ import PhotographyPage from './pages/photographypage/PhotographyPage';
 import PhotographySubPage from './pages/photographypage/PhotographySubPage';
 import WritingPage from "./pages/writingpage/WritingPage";
 import AboutPage from "./pages/aboutpage/AboutPage";
+import ResumePage from "./pages/resumepage/ResumePage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/photography/*" element={<PhotographySubPage/>}/>
         <Route path="/writing" element={<WritingPage/>}/>
         <Route path="/about" element={<AboutPage/>}/>
+        <Route path="/about/resume" element={<ResumePage/>}/>
         <Route path="/" element={<HomePage/>}/>
         <Route path="*" element={<HomePage/>}/>
       </Routes>

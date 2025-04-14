@@ -1,0 +1,16 @@
+@import '../../index.scss';
+
+#resume-page-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 4em 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #resume-embed {
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -12,12 +12,12 @@ import { NavLink } from "react-router-dom";
 function Writing({ w }) {
     return (
         <div className="writing">
-            <NavLink to={w.link} target="_blank" rel="noopener noreferrer">
+            <a href={w.link} target="_blank" rel="noopener noreferrer">
                 <div className="writing-main">
                     <span className="writing-date">{w.date} ── </span>
                     <span className="writing-title">{w.title}</span> 
                 </div>
-            </NavLink>
+            </a>
             <div className="writing-description">{w.description}</div>
         </div>
     )

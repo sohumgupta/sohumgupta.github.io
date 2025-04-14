@@ -1,5 +1,5 @@
 import './HomePage.scss';
-import MePicture from './me.jpg';
+import MePicture from './me.webp';
 import Page from '../../layout/page/Page';
 import Image from '../../layout/image/Image';
 
@@ -10,7 +10,7 @@ function HomePage() {
     const { imagesPreloaded } = useImagePreloader([MePicture]);
 
     if (!imagesPreloaded) {
-        return <LoadingScreen/>
+        // return <LoadingScreen/>
     }
 
     return (
