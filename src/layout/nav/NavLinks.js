@@ -1,6 +1,6 @@
 export let navLinks = [
     { linkText: "Sohum Gupta", href: "/", outerText: ""},
-    { linkText: "Projects", href: "/projects", outerText: "├── "},
+    // { linkText: "Projects", href: "/projects", outerText: "├── "},
     { linkText: "Writing", href: "/writing", outerText: "├── "},
     // { linkText: "Food", href: "/writing#food", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     // { linkText: "Creative", href: "/writing#creative", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
