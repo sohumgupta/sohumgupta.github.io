@@ -26,11 +26,13 @@ function Nav() {
     
     let newNavLinks = navLinks.slice();
     if (path.includes("/photography")) {
+        let index = -1;
+        newNavLinks.find((function(item, i) {if (item.href == '/photography') {index = i + 1; return i;}}))
         if (lastPath == "/photography") {
-            newNavLinks = navLinks.toSpliced(4, 0, ...navPhotoAlbums);
+            newNavLinks = navLinks.toSpliced(index, 0, ...navPhotoAlbums);
         } else {
             let currAlbum = navPhotoAlbums.filter(a => a.href == path)[0];
-            newNavLinks = navLinks.toSpliced(3, 0, {linkText: currAlbum["linkText"], href: currAlbum["href"], outerText: "│\u00a0\u00a0\u00a0\u00a0└── "});
+            newNavLinks = navLinks.toSpliced(index, 0, {linkText: currAlbum["linkText"], href: currAlbum["href"], outerText: "│\u00a0\u00a0\u00a0\u00a0└── "});
         }
     }
 
