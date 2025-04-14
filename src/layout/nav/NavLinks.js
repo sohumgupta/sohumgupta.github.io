@@ -22,7 +22,7 @@ export let navPhotoAlbums = [
     { linkText: "New England", href: "/photography/new%20england", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     { linkText: "Cancun", href: "/photography/cancun", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     { linkText: "Florida", href: "/photography/florida", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
-    { linkText: "Illinois", href: "/photography/illinois", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
+    // { linkText: "Illinois", href: "/photography/illinois", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     { linkText: "San Francisco", href: "/photography/san%20francisco", outerText: "│\u00a0\u00a0\u00a0\u00a0├── "},
     { linkText: "Quebec City", href: "/photography/quebec%20city", outerText: "│\u00a0\u00a0\u00a0\u00a0└── "},
 ]
