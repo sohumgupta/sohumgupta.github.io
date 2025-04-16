@@ -1,7 +1,7 @@
 ## general
 - ~~image loading times for static images!!!~~
 - ~~MAKE "Sohum Gupta" ON PHONE NAV BAR A LINK TO HOMEPAGE!!!~~
-- work on SEO/google search page preview?
+- ~~work on SEO/google search page preview?~~
 
 ## photo page
 - ~~FIGURE OUT BETTER SYSTEM FOR DOTS ON SUBPAGE! ESPECIALLY IF THEY OVERFLOW!!!~~
