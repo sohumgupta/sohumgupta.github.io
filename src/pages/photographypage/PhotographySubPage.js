@@ -14,12 +14,10 @@ function mod(n, m) {
 
 const preloadImages = (ids) => {
     ids.forEach((id) => {
-        const img = <img src={`https://i.imgur.com/${id}.jpg`}/>;
-        // console.log(img);
-        // img.src = `https://i.imgur.com/${id}.jpg`;
+        const img = new window.Image();
+        img.src = `https://i.imgur.com/${id}h.jpg`;
     });
 };
-  
 
 function ImageCarousel() {
     let path = useLocation().pathname;
@@ -28,10 +26,7 @@ function ImageCarousel() {
     let ids = albumIDs[album]["ids"];
     let numIDs = ids.length;
 
-    useEffect(() => {
-        if (!ids?.length) return; 
-        preloadImages(ids);
-    }, [ids]);
+    useEffect(() => {preloadImages(ids);}, [ids]);
 
     const [imgID, setImgID] = useState(0);
 
@@ -65,12 +60,12 @@ function ImageCarousel() {
     let touchScreen = (window.matchMedia("(pointer: coarse)").matches);
 
     return (
-        <div className="image-carousel" {...handlers}>
+        <div className={"image-carousel " + (touchScreen ? "touch" : "")} {...handlers}>
             {/* <div className="description">{albumIDs[album]["descrip"]}</div> */}
             <div className="content">
-                <div className={"prev-button " + (touchScreen ? "touch" : "")} onClick={handlePrev}>←</div>
+                <div className="prev-button" onClick={handlePrev}>←</div>
                 <Image src={"https://i.imgur.com/" + ids[imgID] + "h.jpg"} imgClass="carousel-image"/>
-                <div className={"next-button " + (touchScreen ? "touch" : "")} onClick={handleNext}>→</div>
+                <div className="next-button" onClick={handleNext}>→</div>
             </div>
             <div className="dots-wrapper">
                 {createDots()}

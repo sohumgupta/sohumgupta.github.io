@@ -34,7 +34,10 @@
     }
 
     @include for-size(laptop) {
-        #content-wrapper { padding-right: 4rem; }
+        #content-wrapper { 
+            padding-right: 4rem; 
+            overflow-x: hidden; 
+        }
         #right-wrapper { display: none; }
     }
 

@@ -21,6 +21,7 @@
 
     .nav-link {
         transform: scaleY(1.2);
+        white-space: nowrap;
 
         a { 
             cursor: pointer;
