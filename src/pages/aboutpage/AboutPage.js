@@ -29,13 +29,13 @@ function AboutPage() {
                             I graduated from Brown University in 2022, with degrees in Computer Science and the History of Art and Architecture. During my senior year, I realized that the software engineering world wasn't for me, and decided to volunteer with Peace Corps Ghana. I spent two-ish years in a rural town in the Oti Region, teaching mathematics and computing to junior high school students, planning events and projects at my school and in the larger community, and doing a lot of reading, cooking, and sweating.
                         </p>
                         <p>
-                            I finished up my service and returned to the States in late 2024, and realized that I wanted my career to reflect my passions. To that end, I have been passionate about cooking since I was old enough to look over a stove, and over the last few years this has transformed into a passion for food culture, food systems, and regenerative agriculture. 
+                            After finishing my service and returning to the States in late 2024, I spent nine months as an apprentice cheesemaker at Cherry Grove Farm, a farmstead creamery in central New Jersey – where my passion for food systems and regenerative agriculture was further cultivated. I'm now based in New York, looking for work in food systems and food access, and trying to keep up with my languages, hobbies, and friends.
                         </p>
                         <p>
                             This website is a repository of a lot of the stuff I've written, photographed, and thought about, from college to now. It's a bit jumbled, but I hope you'll find something you're interested in.
                         </p>
                         <p>
-                            Please reach out to me if you want to chat about food, movies, art, or anything else you find interesting. I'm also currently looking for work!
+                            If you're a recruiter reading this, please hire me! If you're anyone else, please reach out to me if you want to chat about food, movies, art, or anything else :)
                         </p>
                     </div>
                 </div>

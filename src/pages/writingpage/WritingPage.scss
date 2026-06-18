@@ -1,7 +1,6 @@
 @import '../../index.scss';
 
 #writing-page-wrapper {
-    width: 100%;
     height: fit-content;
     min-height: 100%;
 
@@ -14,60 +13,75 @@
         padding-bottom: 2rem;
     }
 
-    h1 {
-        font-family: $body-font;
-        font-weight: bold;
-        font-size: $body-font-sz-1;
-        margin-top: 1rem;
-    }
-
     .writing-wrapper {
+        padding: 4rem 0;
         width: 100%;
-            
+        max-width: 65ch;
+
         display: flex;
         flex-direction: column;
+        gap: 2rem;
 
-        gap: 1rem;
-
-        .writing {
-            width: 100%;            
+        .writing-section-wrapper {
             display: flex;
             flex-direction: column;
-            transition: padding 0.5s ease;
+            gap: 1rem;
 
-            gap: 0.5rem;
-
-            .writing-description {
+            .writing-section-name {
                 font-family: $body-font;
-                font-size: $body-font-sz-3;
+                font-weight: bold;
+                font-size: $body-font-sz-1;
+                line-height: 0.9;
+            }
+
+            .writing {
+                width: 100%;            
+                display: flex;
+                flex-direction: column;
                 transition: padding 0.5s ease;
 
-                text-align: justify;
-            }
-    
-            .writing-main {
-                font-weight: bold;
-                color: black;
+                gap: 0.5rem;
 
-                &:hover { 
-                    font-style: italic;
-                }
-
-                .writing-title {
+                .writing-description {
                     font-family: $body-font;
-                    text-decoration: underline;
-                    font-size: $body-font-sz-2;
+                    font-size: $body-font-sz-4;
+                    transition: padding 0.5s ease;
+
+                    text-align: justify;
+                    max-width: 65ch;
                 }
 
-                .writing-date {
+                .writing-publication {
                     font-family: $mono-font;
-                    // padding-right: 1ch;
-                    font-size: $mono-font-sz-2;
-                    text-decoration: none;
+                    font-size: $mono-font-sz-3;
+                    font-weight: bold;
+                    font-style: italic;
+                    transition: padding 0.5s ease;
+                    padding-bottom: 0.25rem;
+                }
+        
+                .writing-main {
+                    font-weight: bold;
+                    color: black;
+
+                    &:hover { 
+                        font-style: italic;
+                    }
+
+                    .writing-title {
+                        font-family: $body-font;
+                        text-decoration: underline;
+                        font-size: $body-font-sz-2;
+                    }
+
+                    .writing-date {
+                        font-family: $mono-font;
+                        // padding-right: 1ch;
+                        font-size: $mono-font-sz-2;
+                        text-decoration: none;
+                    }
                 }
             }
         }
-
     }
-
 }   

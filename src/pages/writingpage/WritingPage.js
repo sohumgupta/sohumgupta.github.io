@@ -10,6 +10,7 @@ import writing from './Writing';
 import { NavLink } from "react-router-dom";
 
 function Writing({ w }) {
+    let publication = w.publication ? <div className="writing-publication">└── {w.publication}</div> : null;
     return (
         <div className="writing">
             <a href={w.link} target="_blank" rel="noopener noreferrer">
@@ -18,6 +19,7 @@ function Writing({ w }) {
                     <span className="writing-title">{w.title}</span> 
                 </div>
             </a>
+            { publication }
             <div className="writing-description">{w.description}</div>
         </div>
     )
@@ -33,8 +35,8 @@ function WritingPage() {
                 <div className="writing-wrapper">
                     { 
                         writing.map((s, i) => 
-                            <div className="writing-wrapper" key={i}>
-                                <h1>{s.section}</h1>
+                            <div className="writing-section-wrapper" key={i}>
+                                <h1 className="writing-section-name">{s.section}</h1>
                                 { s.pieces.map((p, j) => <Writing w={p} key={j}/>) }
                             </div>
                         ) 

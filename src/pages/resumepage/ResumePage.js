@@ -1,7 +1,7 @@
 import './ResumePage.scss';
 import Page from '../../layout/page/Page';
 
-import ResumePDF from './SohumGupta_Resume_Mar2025.pdf';
+import ResumePDF from './SohumGupta_Resume_June2026.pdf';
 
 function ResumePage() {
     return (
