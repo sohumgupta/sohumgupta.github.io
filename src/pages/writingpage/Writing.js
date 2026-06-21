@@ -1,5 +1,4 @@
 import ChasingChaat from './pdfs/ChasingChaat.pdf';
-import MaaKeHaathKa from './pdfs/MaaKeHaathKaCompressed.pdf';
 import OldHustle from './pdfs/OldHustle.pdf';
 import PaperPlanes from './pdfs/PaperPlanes.pdf';
 
@@ -41,7 +40,7 @@ let writing = [
                 title: "Maa Ke Haath Ka",
                 date: "Nov 2025",
                 description: <>I envisioned this cookbook as a collaboration between my grandmother and I: her recipes and my kitchen, her words and my camera, her intuition and my precision. Made as a 60th birthday gift for <i>my</i> mother, this cookbook is a snapshot of North Indian homestyle cooking from the hands of <i>her</i> mother.</>,
-                link: MaaKeHaathKa
+                link: "https://archive.org/details/maa-ke-haath-ka"
             },
             { 
                 title: "Chasing Chaat",
