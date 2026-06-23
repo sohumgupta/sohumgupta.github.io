@@ -8,14 +8,14 @@ let writing = [
         pieces: [
             { 
                 title: "Waiting to be Cleansed",
-                publication: "Awaaz Magazine, Winter 2026 Issue",
+                publication: "Sobremesa Magazine, Volume 5: FIRE",
                 date: "Feb 2026",
                 description: <>This piece explores fire, food, and the complicated ethics of my own vegetarianism, through a slaughtered sheep in Ghana and the rituals of the Hindu temple.</>,
                 link: "https://www.sobremesamagazine.com/shop/p/sobremesa-volume-4-z69e4"
             },
             { 
                 title: "Framing the Aangan",
-                publication: "Sobremesa Magazine, Volume 4: FIRE",
+                publication: "Awaaz Magazine, Winter 2026 Issue",
                 date: "Jan 2026",
                 description: <>A piece examining the role of the <i>aangan</i>, or inner courtyard, in Indian popular media, especially how it relates to women's role as cook within the space.</>,
                 link: "https://heyzine.com/flip-book/e045dcd43e.html"
